@@ -1,0 +1,42 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Benchmark outputs (generated at runtime)
+results/*.json
+results/*.csv
+results/*.tex
+results/*.pdf
+benchmark_results/
+benchmark_qdrant_data*/
+datasets/*.json
+
+# Logs
+logs/
+*.log
+
+# Temporary
+*.tmp
+~$*
