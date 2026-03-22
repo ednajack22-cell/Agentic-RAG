@@ -119,6 +119,9 @@ All system parameters are documented in [`config/SYSTEM_CONFIGURATION.md`](confi
 | **Governed Frontier** | Pro (forced) | OFF | Full verification | Hybrid + Reranker |
 | **No Validation** | Flash | OFF | Disabled | Hybrid + Reranker |
 | **Vanilla RAG** | Flash | OFF | Disabled | Hybrid only |
+| **Vanilla Pro Baseline** | Pro | OFF | Disabled | Hybrid only |
+
+*Note: The raw datasets mathematically proving the Vanilla Pro baseline (`Vanilla_Pro_Raw_Outputs.csv`) and the Open-Weights generalizability pilot from Appendix D (`Cross_Family_Pilot_Raw_Data.csv` for Llama 3 70B and Mixtral 8x7B) are included in the repository root to ensure full empirical reproducibility.*
 
 **Parity statement:** Retrieval index, embedding model, BM25 parameters, RRF fusion weights, Top-K, reranker model, and reranking Top-N were held identical between Governed Efficient and Governed Frontier. The sole manipulated independent variable was the generative language model.
 
