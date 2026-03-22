@@ -129,7 +129,9 @@ All system parameters are documented in [`config/SYSTEM_CONFIGURATION.md`](confi
 
 Faithfulness was evaluated using the RAGAS framework with GPT-4o as an independent external judge (chain-of-thought claim extraction and cross-checking). Continuous scores were binarized at ≥ 0.55 for the TOST equivalence test.
 
-Human validation was conducted on a stratified 50-query sample, achieving Cohen's κ ≈ 0.912 inter-rater reliability. See [`data/annotation_guidelines.md`](data/annotation_guidelines.md) for the full protocol.
+Human validation was conducted on an expanded 150-query sample, achieving Cohen's κ = 0.940 inter-rater reliability. See [`data/annotation_guidelines.md`](data/annotation_guidelines.md) for the full protocol.
+
+*Note: The master empirical execution logs mathematically enforcing the TOST equivalence statistical findings are permanently archived in `results/Primary_500_Sample_Results.csv`. The full human validation verification grid is archived in `results/Human_Validation_150_Samples.csv`.*
 
 ## Cost Model
 
