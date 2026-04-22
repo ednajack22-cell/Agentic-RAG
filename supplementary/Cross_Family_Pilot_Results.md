@@ -1,0 +1,11 @@
+# Cross-family architecture generalization pilot
+To ensure the proposed Agentic RAG architecture was not overfitted to the proprietary Gemini model family, a smaller validation pilot (n = 50 queries) was conducted using open-weights models specifically Llama 3 (70B) and Mixtral (8x7B). To ensure comparability, these 50 queries were a stratified random subsample drawn directly from the main 500-query dataset. The system retained identical reasoning prompts, verification frameworks, and evaluation criteria (RAGAS operationalization threshold = 0.55).
+To isolate the effectiveness of the architecture from the baseline capabilities of the models, we evaluated both the “Vanilla” (ungoverned RAG) and “Agentic” (governed) configurations. As demonstrated in Table D1, the agentic verification-and-repair loop generated a substantial faithfulness lift for both open-weights models (+12.0 pp for Llama 3; +14.0 pp for Mixtral). Given the limited pilot sample size, these results should be interpreted as directional evidence of architectural transferability rather than precise performance estimates (e.g., the 95% CI for Llama 3 agentic faithfulness spans [73.3%, 94.2%], illustrating the imprecision inherent in small-sample estimates). Exhaustive benchmarking and formal non-inferiority testing were reserved for the primary Flash versus Pro economic comparison (N = 500) reported in the main text.
+Table D1. Cross-family pilot governance lift (n = 50).
+
+| Model Family | Configuration | Vanilla Faithfulness | Agentic Faithfulness | Governance Lift |
+| --- | --- | --- | --- | --- |
+| Meta | Llama 3 (70B) | 74.0% (37/50) | 86.0% (43/50) | +12.0 pp |
+| Mistral AI | Mixtral (8x7B) | 68.0% (34/50) | 82.0% (41/50) | +14.0 pp |
+
+Note. Governance lift estimates are based on n = 50 and carry wide confidence intervals; they should be interpreted directionally. For comparison, in the primary N = 500 evaluation, governance lift was +9.0 pp for Flash (81.6% → 90.6%) and +5.0 pp for Pro (84.2% → 89.2%). The larger governance lift observed for the open-weights models is consistent with the expectation that less capable base models benefit more from architectural verification.
